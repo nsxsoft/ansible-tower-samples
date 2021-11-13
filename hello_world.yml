@@ -15,6 +15,6 @@
           - hostname: ntp2.ulaval.ca
             iburst: yes
       roles:
-        names: rhel-system-roles.timesync
+        name: rhel-system-roles.timesync
       
    
