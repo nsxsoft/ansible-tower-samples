@@ -7,6 +7,7 @@
     - name: hostname
       shell: hostnamectl
       register: info
+      
     - name: info
       debug:
-        vars: info
+        msg: 
