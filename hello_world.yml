@@ -1,7 +1,7 @@
 ---
 - name: Hello World Sample
   hosts: ul-bip-ts-asm01.ul.ca
-  connexion: local
+  connection: local
   # BIP Basic Configuration
   vars:
     bip_server: "{{ ansible_host }}"
