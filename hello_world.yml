@@ -6,15 +6,7 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
-        
-    - name: Set time
-      rhel-system-roles.timesync:
-        vars:
-          timesync_ntp_servers:
-            - hostname: ntp.ulaval.ca
-              iburst: yes
-            - hostname: ntp2.ulaval.ca
-              iburst: yes
+  
     
       
    
