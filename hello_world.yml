@@ -1,6 +1,7 @@
 ---
 - name: Hello World Sample
   hosts: ul-bip-ts-asm01.ul.ca
+  connexion: local
   # BIP Basic Configuration
   vars:
     bip_server: "{{ ansible_host }}"
@@ -28,10 +29,24 @@
   collections:
     - f5networks.f5_modules
     
-  tasks:
-    - name: Hello Message
-      debug:
-        msg: "Hello World!"
+   tasks:
+    - name : BIGIP Get ConfigSync Status 
+      bigip_command:
+        provider: "{{ bip_provider }}"
+        commands:
+           - "tmsh show /cm sync-status"
+      register: tmsh_data
+
+    - set_fact:
+        configsync: {
+           color: "{{ tmsh_data.stdout_lines[0][3] | regex_replace('Color (.*)$', '\\1') | trim }}",
+           status: "{{ tmsh_data.stdout_lines[0][4] | regex_replace('Status (.*)$', '\\1') | trim }}",
+           mode: "{{ tmsh_data.stdout_lines[0][5] | regex_replace('Mode (.*)$', '\\1') | trim }}",
+           summary: "{{ tmsh_data.stdout_lines[0][6] | regex_replace('Summary (.*)$', '\\1') | trim }}"
+        }
+
+    - debug:
+        msg: "{{ configsync }}"
      
    
       
