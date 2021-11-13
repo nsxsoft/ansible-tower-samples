@@ -16,5 +16,8 @@
       register: shell_info
     - debug:
         msg: "{{ shell_info.stdout_lines }}"
+    - name: Set time
+      roles:
+        - rhel-system-roles.timesync
       
    
