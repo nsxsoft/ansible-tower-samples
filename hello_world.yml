@@ -1,4 +1,4 @@
-- name: Hello World Sample
+u- name: Hello World Sample
   hosts: all
   tasks:
     - name: Hello Message
@@ -8,6 +8,6 @@
       shell: hostnamectl
       register: shell_info
     - debug:
-        msg: "{{ shell_info }}"
+        msg: "{{ shell_info.stdout_lines }}"
       
    
