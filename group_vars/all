@@ -1,1 +1,22 @@
-
+--- 
+bip_server: "{{ ansible_host }}"
+bip_port: 443
+bip_user: "{{ ansible_user }}"
+bip_password: "{{ ansible_password }}"
+bip_validate_certs: false
+bip_transport: rest
+bip_timeout: 120
+bip_method: POST
+bip_delay: 30
+bip_retries: 10
+bip_provider:
+   server: "{{ bip_server }}"
+   server_port: "{{ bip_port }}"
+   user: "{{ bip_user }}"
+   password: "{{ bip_password }}"
+   validate_certs: "{{ bip_validate_certs }}"
+   transport: "{{ bip_transport }}"
+   auth_provider: tmos
+as3_show: base
+as3_showhash: true
+as3_async: false
