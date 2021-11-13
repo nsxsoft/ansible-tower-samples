@@ -8,6 +8,6 @@
       shell: hostnamectl
       register: shell_info
     - debug:
-        msg: {{ shell_info }}
+        msg: "{{ shell_info }}"
       
    
