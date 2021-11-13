@@ -8,13 +8,13 @@
         msg: "Hello World!"
         
     - name: Set time
-      vars:
-        timesync_ntp_servers:
-          - hostname: ntp.ulaval.ca
-            iburst: yes
-          - hostname: ntp2.ulaval.ca
-            iburst: yes
-      roles:
-        name: rhel-system-roles.timesync
+      rhel-system-roles.timesync:
+        vars:
+          timesync_ntp_servers:
+            - hostname: ntp.ulaval.ca
+              iburst: yes
+            - hostname: ntp2.ulaval.ca
+              iburst: yes
+    
       
    
