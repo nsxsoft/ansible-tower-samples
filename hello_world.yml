@@ -1,15 +1,19 @@
 ---
 - name: Hello World Sample
   hosts: all
-  # import_roles: rhel-system-roles.timesync
-  
+  collections:
+    - geerlingguy.php_roles
+    
   tasks:
     - name: Hello Message
       debug:
         msg: "Hello World!"
-    - import_role:
-        name: rhel-system-roles.timesync
-  
+        
+  roles:
+    - php
+    - role: php-versions
+      vars:
+        php_version: '7.3'
     
       
    
