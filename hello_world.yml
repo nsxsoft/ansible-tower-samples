@@ -11,6 +11,7 @@
         commands:
            - "tmsh show /cm sync-status"
       register: tmsh_data
+      delegate_to: runner
   
     - set_fact:
         configsync: {
