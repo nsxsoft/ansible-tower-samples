@@ -1,7 +1,7 @@
 ---
 - name: Hello World Sample
   hosts: all
-  import_roles: rhel-system-roles.timesync
+  # import_roles: rhel-system-roles.timesync
   
   tasks:
     - name: Hello Message
