@@ -1,4 +1,0 @@
----
-- src: https://github.com/linux-system-roles/timesync.git
-  scm: git
-  name: rhel-system-roles.timesync
