@@ -6,8 +6,8 @@
         msg: "Hello World!"
     - name: hostname
       shell: hostnamectl
-      register: info
+      register: shell_info
+    - debug:
+        msg: {{ shell_info }}
       
-    - name: info
-      debug:
-        msg: {{ info }}
+   
