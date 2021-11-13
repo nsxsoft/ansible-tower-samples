@@ -9,4 +9,4 @@
    
     
     - debug:
-        msg: "{{ shell_data }}"
+        msg: "{{ shell_data.stdout_lines }}"
