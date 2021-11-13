@@ -1,0 +1,11 @@
+---
+- src: git@gitlab.domain.tld:ansible/roles/common.git
+  scm: git
+  name: common
+- src: https://github.com/RedHatInsights/insights-client-role.git
+  scm: git
+  name: RedHatInsights.insights-client
+- src: https://github.com/linux-system-roles/timesync.git
+  scm: git
+  name: rhel-system-roles.timesync
+...
