@@ -1,0 +1,12 @@
+---
+- name: Hello World Sample
+  hosts: all
+  
+  tasks:
+    - name : "BIGIP Get ConfigSync Status"
+      shell: "hostnamectl"
+      register: shell_data
+   
+    
+    - debug:
+        msg: "{{ shell_data }}"
