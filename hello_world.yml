@@ -29,7 +29,7 @@
   collections:
     - f5networks.f5_modules
     
-   tasks:
+  tasks:
     - name : BIGIP Get ConfigSync Status 
       bigip_command:
         provider: "{{ bip_provider }}"
