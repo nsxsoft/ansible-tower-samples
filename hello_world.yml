@@ -6,3 +6,7 @@
         msg: "Hello World!"
     - name: hostname
       shell: hostnamectl
+      register: info
+    - name: info
+      debug:
+        vars: info
