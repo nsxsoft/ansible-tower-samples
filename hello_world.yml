@@ -10,5 +10,15 @@
       register: shell_info
     - debug:
         msg: "{{ shell_info.stdout_lines }}"
+        
+    - name: Set timesync
+      vars:
+        timesync_ntp_servers:
+          - hostname: ntp.ulaval.ca
+            iburst: yes
+          - hostname: ntp2.ulaval.ca
+            iburst: yes
+      roles:
+        - linux-system-roles.timesync
       
    
