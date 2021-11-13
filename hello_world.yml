@@ -2,7 +2,9 @@
 - name: Hello World Sample
   hosts: ul-bip-ts-asm01.ul.ca
   connection: local
-  # BIP Basic Configuration
+  collections:
+    - f5networks.f5_modules
+    
   vars:
     bip_server: "{{ ansible_host }}"
     bip_port: 443
@@ -25,9 +27,6 @@
     as3_show: base
     as3_showhash: true
     as3_async: false
-
-  collections:
-    - f5networks.f5_modules
     
   tasks:
     - name : BIGIP Get ConfigSync Status 
