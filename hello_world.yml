@@ -7,6 +7,8 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
+    - import_role:
+        name: rhel-system-roles.timesync
   
     
       
