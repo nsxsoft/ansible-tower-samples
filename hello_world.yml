@@ -9,8 +9,7 @@
       shell: hostnamectl
       register: shell_info
     - debug:
-        msg: "{{ shell_info.stdout_lines }}"
-        
+        msg: "{{ shell_info.stdout_lines }}"      
     - name: Set timesync
       vars:
         timesync_ntp_servers:
