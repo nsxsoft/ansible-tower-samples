@@ -1,11 +1,10 @@
 ---
 - name: Hello World Sample
-  hosts: ul-bip-ts-asm01.ul.ca
+  hosts: all
   connection: local
-  collections:
-    - f5networks.f5_modules
-    
-
+  
+  #collections:
+  #  - f5networks.f5_modules
     
   tasks:
     - name : BIGIP Get ConfigSync Status 
