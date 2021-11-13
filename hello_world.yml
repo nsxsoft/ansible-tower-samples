@@ -15,9 +15,6 @@
       shell: hostnamectl
       register: shell_info
     - debug:
-        msg: "{{ shell_info.stdout_lines }}"      
-    - name: Set timesync
-      roles:
-        - linux-system-roles.timesync
+        msg: "{{ shell_info.stdout_lines }}"
       
    
