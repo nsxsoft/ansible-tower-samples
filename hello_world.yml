@@ -1,7 +1,6 @@
 ---
 - name: Hello World Sample
   hosts: all
-  connection: local
   
   tasks:
     - name : "BIGIP Get ConfigSync Status"
@@ -10,6 +9,7 @@
         commands:
            - "tmsh show /cm sync-status"
       register: tmsh_data
+      delegate_to: localhost
 
     - set_fact:
         configsync: {
