@@ -10,4 +10,4 @@
       
     - name: info
       debug:
-        msg: 
+        msg: {{ info }}
