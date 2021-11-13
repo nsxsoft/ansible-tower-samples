@@ -1,12 +1,7 @@
 ---
 - name: Hello World Sample
   hosts: all
-  vars:
-    timesync_ntp_servers:
-      - hostname: ntp.ulaval.ca
-        iburst: yes
-      - hostname: ntp2.ulaval.ca
-        iburst: yes
+  
   tasks:
     - name: Hello Message
       debug:
@@ -17,6 +12,12 @@
     - debug:
         msg: "{{ shell_info.stdout_lines }}"
     - name: Set time
+      vars:
+        timesync_ntp_servers:
+          - hostname: ntp.ulaval.ca
+            iburst: yes
+          - hostname: ntp2.ulaval.ca
+            iburst: yes
       roles:
         - rhel-system-roles.timesync
       
