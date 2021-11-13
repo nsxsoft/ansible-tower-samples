@@ -1,12 +1,11 @@
 ---
-- name: Hello World Sample
+- name: UL Host Information
   hosts: all
   
   tasks:
-    - name : "BIGIP Get ConfigSync Status"
+    - name : "Get Host Information"
       shell: "hostnamectl"
       register: shell_data
    
-    
     - debug:
         msg: "{{ shell_data.stdout_lines }}"
