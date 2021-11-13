@@ -8,9 +8,7 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
-        
-  roles:
-    - php
+     
    
       
    
