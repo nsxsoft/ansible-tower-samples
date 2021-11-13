@@ -3,11 +3,8 @@
   hosts: all
   connection: local
   
-  #collections:
-  #  - f5networks.f5_modules
-    
   tasks:
-    - name : BIGIP Get ConfigSync Status 
+    - name : "BIGIP Get ConfigSync Status"
       bigip_command:
         provider: "{{ bip_provider }}"
         commands:
