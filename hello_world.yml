@@ -6,11 +6,7 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
-    - name: hostname
-      shell: hostnamectl
-      register: shell_info
-    - debug:
-        msg: "{{ shell_info.stdout_lines }}"
+        
     - name: Set time
       vars:
         timesync_ntp_servers:
