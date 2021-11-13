@@ -5,8 +5,8 @@ roles:
     version: 1.9.6
     
   - name: rhel-system-roles.timesync
-    src: https://github.com/linux-system-roles/timesync.git
-    scm: git
+    source: https://github.com/linux-system-roles/timesync.git
+    type: git
  
 
 collections:
