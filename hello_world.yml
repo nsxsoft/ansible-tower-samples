@@ -10,7 +10,7 @@
         msg: "Hello World!"
         
   roles:
-    - php
+    - geerlingguy.php
     - role: geerlingguy.php-versions
       vars:
         php_version: '7.3'
